@@ -2,10 +2,10 @@
   "name": "smart-brain-api",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "./smart-brain-api/script.js",
   "scripts": {
-    "start": "node script.js",
-    "start:dev": "nodemon script.js"
+    "start": "node ./smart-brain-api/script.js",
+    "start:dev": "nodemon ./smart-brain-api/script.js"
   },
   "author": "",
   "license": "ISC",
