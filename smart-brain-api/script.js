@@ -7,13 +7,18 @@ const signin = require('./controllers/signin.js');
 const profileId = require('./controllers/profileId.js');
 const image = require('./controllers/image.js');
 
+
 const db= knex({
     client: 'pg',
     connection: {
-      connectionString : process.env.DATABASE_URL,
-      ssl: true,
+      cconnectionString: process.env.DATABASE_URL,
+      ssl: {
+        rejectUnauthorized: false
+      }
     }
   });
+
+  db.connect();
 
 const app = express();
 app.use(express.json());
